@@ -14,6 +14,7 @@ AngularJS concepts overview
 ***ng-init*** directive initializes AngularJS application variables.
 ***ng-controller*** directive defines the controller.
 ***ng-repeat*** directive repeats an HTML element.
+***ng-show*** directive shows the specified HTML element if the expression evaluates to true, otherwise the HTML element is hidden.
 
 AngularJS expressions **{{ expression }}** bind AngularJS data to HTML the same way as the ng-bind directive.
          
@@ -70,4 +71,36 @@ The legal restrict values are:
 >**C** for Class,
 >**M** for Comment
 
+`app.directive("saRajDirective", function() {
+  return {
+    restrict : "A",
+    template : "<h1>Made by a directive!</h1>"
+  };
+});`
+
 By default the value is **EA**. It means both Element and attribute names can invoke the directive.
+
+## AngularJS Scope
+The scope is the binding part between the HTML (view) and the JavaScript (controller).
+When we make a controller in AngularJS, we pass the **$scope** object as an argument.
+When adding properties to the **$scope** object in the controller, the view (HTML) gets access to these properties.
+
+### Root Scope
+All applications have a **$rootScope** which is the scope created on the HTML element that contains the ng-app directive.
+The rootScope is available in the entire application.
+If a variable has the same name in both the current scope and in the rootScope, the application uses the one in the current scope.
+
+## AngularJS Filters
+Filters can be added in AngularJS to format data. Filters can be added to expressions by using the pipe character **|**, followed by a filter.
+
+AngularJS provides filters to transform data:
+
+>1) currency: Format a number to a currency format.
+>2) date: Format a date to a specified format.
+>3) filter: Select a subset of items from an array.
+>4) json: Format an object to a JSON string.
+>5) limitTo: Limits an array/string, into a specified number of elements/characters.
+>6) lowercase: Format a string to lower case.
+>7) number: Format a number to a string.
+>8) orderBy: Orders an array by an expression.
+>9) uppercase: Format a string to upper case.
