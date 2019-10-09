@@ -15,6 +15,9 @@ AngularJS concepts overview
 ***ng-controller*** directive defines the controller.
 ***ng-repeat*** directive repeats an HTML element.
 ***ng-show*** directive shows the specified HTML element if the expression evaluates to true, otherwise the HTML element is hidden.
+***ng-options*** directive in AngularJS is used to build and bind HTML element with options to a model property. 
+It is used to specify `<options>` in a `<select>` list. It is designed specifically to populate the items of a dropdown list. It is supported by `<supported>` element.
+
 
 AngularJS expressions **{{ expression }}** bind AngularJS data to HTML the same way as the ng-bind directive.
          
