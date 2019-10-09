@@ -16,12 +16,34 @@ AngularJS concepts overview
 
 AngularJS expressions **{{ expression }}** bind AngularJS data to HTML the same way as the ng-bind directive.
          
-**HTML:** `<div ng-app="myApp" ng-controller="myCtrl">`
+## AngularJS Modules
+       An AngularJS module defines an application. The module is a container for the different parts of an application. 
+       The module is a container for the application controllers. Controllers always belong to a module.
+       
+### Creating a Module
+A module is created by using the AngularJS function **angular.module**
 
-**JS:**`
+**HTML:** `<div ng-app="myApp">`
+**JS:** `
 var app = angular.module('myApp', []);
+`
+### Adding a Controller   
+Add a controller to your application, and refer to the controller with the **ng-controller** directive
+
+**HTML:** `<div ng-app="myApp" ng-controller="myCtrl">`
+**JS:** `
 app.controller('myCtrl', function($scope) {
-  $scope.firstName= "John";
-  $scope.lastName= "Doe";
+  $scope.firstName= "saRaj";
+  $scope.lastName= "Penjarla";
 });
 `
+### Adding a Directive
+AngularJS has a set of built-in directives which you can use to add functionality to your application.
+However, we can use the module to create our own directives to our application.
+
+**HTML:**`<div ng-app="myApp" sa-raj-directive/>`
+**JS:**`app.directive("saRajDirective", function() {
+  return {
+    template : "My Custom Directive"
+  };
+});
