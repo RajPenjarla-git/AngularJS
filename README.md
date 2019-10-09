@@ -53,7 +53,7 @@ When naming a directive, we must use a camel case name, saRajDirective, but when
   return {
     template : "My Custom Directive"
   };
-});
+});`
 
 we can invoke a directive by using: 
 >1) Element name 2) Attribute 3) Class 4) Comment
