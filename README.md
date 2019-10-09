@@ -60,3 +60,14 @@ we can invoke a directive by using:
 >2) Attribute: `<div sa-raj-directive></div>` 
 >3) Class: `<div class="sa-raj-directive"></div>` 
 >4) Comment: `<!-- directive: sa-raj-directive -->`
+### Restrictions
+We can restrict our directives to only be invoked by some of the methods. Like, by adding a restrict property with the value **"A"**, the directive can only be invoked by **attributes**.
+
+The legal restrict values are:
+
+>**E** for Element name,
+>**A** for Attribute,
+>**C** for Class,
+>**M** for Comment
+
+By default the value is **EA**. It means both Element and attribute names can invoke the directive.
