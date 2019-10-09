@@ -56,4 +56,7 @@ When naming a directive, we must use a camel case name, saRajDirective, but when
 });`
 
 we can invoke a directive by using: 
->1) Element name 2) Attribute 3) Class 4) Comment
+>1) Element name : `<sa-raj-directive></sa-raj-directive>`
+>2) Attribute: `<div sa-raj-directive></div>` 
+>3) Class: `<div class="sa-raj-directive"></div>` 
+>4) Comment: `<!-- directive: sa-raj-directive -->`
