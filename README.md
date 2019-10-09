@@ -104,3 +104,57 @@ AngularJS provides filters to transform data:
 >7) number: Format a number to a string.
 >8) orderBy: Orders an array by an expression.
 >9) uppercase: Format a string to upper case.
+
+### Custom Filters
+We can make our own filters by registering a new filter factory function with the module.
+
+***myFormat*** custom filter will format every other character to uppercase.
+` 
+app.filter('myFormat', function() {
+  return function(x) {
+    var i, c, txt = "";
+    for (i = 0; i < x.length; i++) {
+      c = x[i];
+      if (i % 2 == 0) {
+        c = c.toUpperCase();
+      }
+      txt += c;
+    }
+    return txt;
+  };
+});
+`
+## AngularJS Services
+A service is a function, or object, that is available for, and limited to, your AngularJS application.
+AngularJS has about 30 built-in services. However, we can make our own service.
+
+***$location*** service has methods which return information about the location of the current web page.
+***$http*** service is one of the most common used services in AngularJS applications. The service makes a request to the server, and lets your application handle the response. **$http** is an AngularJS service for reading data from remote servers.
+***$timeout*** service is AngularJS version of the **window.setTimeout** function.
+***$interval*** service is AngularJS version of the **window.setInterval** function.
+
+**Example:**`
+app.controller('myCtrl', function($scope, $http) {
+  $http.get("welcome.htm").then(function (response) {
+    $scope.myWelcome = response.data;
+  });
+});
+`
+### Create Own Service
+To create own service, connect service to the module.
+
+`app.service('hexafy', function() {
+  this.myFunc = function (x) {
+    return x.toString(16);
+  }
+});
+`
+
+To use custom made service, we have to add it as a dependency when defining the controller.
+
+**Example:** Use the custom made service named **hexafy** to convert a number into a hexadecimal number.
+
+`app.controller('myCtrl', function($scope, hexafy) {
+  $scope.hex = hexafy.myFunc(255);
+});`
+
