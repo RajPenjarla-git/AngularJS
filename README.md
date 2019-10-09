@@ -13,6 +13,7 @@ AngularJS concepts overview
 ***ng-bind*** directive binds application data to the HTML view.
 ***ng-init*** directive initializes AngularJS application variables.
 ***ng-controller*** directive defines the controller.
+***ng-repeat*** directive repeats an HTML element.
 
 AngularJS expressions **{{ expression }}** bind AngularJS data to HTML the same way as the ng-bind directive.
          
@@ -37,9 +38,15 @@ app.controller('myCtrl', function($scope) {
   $scope.lastName= "Penjarla";
 });
 `
-### Adding a Directive
+## AngularJS Directives
+AngularJS lets you extend HTML with new attributes called Directives.
 AngularJS has a set of built-in directives which you can use to add functionality to your application.
-However, we can use the module to create our own directives to our application.
+
+### Create New Directives
+New directives are created by using the ***.directive*** function.
+we can use the module to create our own directives to our application.
+
+When naming a directive, we must use a camel case name, saRajDirective, but when invoking it, we must use - separated name, sa-raj-directive
 
 **HTML:**`<div ng-app="myApp" sa-raj-directive/>`
 **JS:**`app.directive("saRajDirective", function() {
@@ -47,3 +54,6 @@ However, we can use the module to create our own directives to our application.
     template : "My Custom Directive"
   };
 });
+
+we can invoke a directive by using: 
+>1) Element name 2) Attribute 3) Class 4) Comment
