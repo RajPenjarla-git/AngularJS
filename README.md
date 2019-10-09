@@ -12,4 +12,6 @@ AngularJS concepts overview
 **ng-model** directive binds the value of HTML controls (input, select, textarea) to application data.
 **ng-bind** directive binds application data to the HTML view.
 **ng-init** directive initializes AngularJS application variables.
+
+AngularJS expressions **{{ expression }}** bind AngularJS data to HTML the same way as the ng-bind directive.
          
