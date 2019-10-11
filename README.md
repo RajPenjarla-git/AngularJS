@@ -205,3 +205,12 @@ app.controller("aboutCtrl", function ($scope) {
   $scope.msg = "It's a CMM5 Level MNC company";
 });
 `
+### Where Does it Go?
+Our application needs a container to put the content provided by the routing. 
+**ng-view** directive is the container.
+
+There are three different ways to include the **ng-view** directive in your application:
+>1) <div ng-view></div>
+>2) <ng-view></ng-view>
+>3) <div class="ng-view"></div>
+
