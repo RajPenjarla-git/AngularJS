@@ -168,3 +168,9 @@ The **ngRoute** module helps our application to become a Single Page Application
 ### What is Routing in AngularJS?
 If you want to navigate to different pages in your application, but you also want the application to be a SPA (Single Page Application), with no page reloading, you can use the **ngRoute** module.
 
+The ***ngRoute*** module routes your application to different pages without reloading the entire application.
+
+### What do I Need?
+To make your applications ready for routing, you must include the AngularJS Route module:
+`<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>` 
+**Or download angular.route.js file and save it in your project js folder**
