@@ -215,4 +215,7 @@ There are three different ways to include the **ng-view** directive in your appl
 >2) `<ng-view></ng-view>`
 >3) `<div class="ng-view"></div>`
 
+## AngularJS Routing Using UI-Router
+The **UI-Router** is a routing framework for AngularJS built by the AngularUI team. 
+It provides a different approach than ***ngRoute*** in that it changes your application views based on state of the application and not just the route URL.
 
