@@ -162,3 +162,9 @@ To use custom made service, we have to add it as a dependency when defining the 
   $scope.hex = hexafy.myFunc(255);
 });`
 
+## AngularJS Routing
+The **ngRoute** module helps our application to become a Single Page Application.
+
+### What is Routing in AngularJS?
+If you want to navigate to different pages in your application, but you also want the application to be a SPA (Single Page Application), with no page reloading, you can use the **ngRoute** module.
+
