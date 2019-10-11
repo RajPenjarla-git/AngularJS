@@ -18,6 +18,7 @@ AngularJS concepts overview
 ***ng-options*** directive in AngularJS is used to build and bind HTML element with options to a model property. 
 It is used to specify `<options>` in a `<select>` list. It is designed specifically to populate the items of a dropdown list. It is supported by `<supported>` element.
 ***ngRoute*** module routes your application to different pages without reloading the entire application.
+***ng-view*** is the directive that angular uses as a container to switch between views.
 
 
 AngularJS expressions **{{ expression }}** bind AngularJS data to HTML the same way as the ng-bind directive.
@@ -210,7 +211,8 @@ Our application needs a container to put the content provided by the routing.
 **ng-view** directive is the container.
 
 There are three different ways to include the **ng-view** directive in your application:
->1) <div ng-view></div>
->2) <ng-view></ng-view>
->3) <div class="ng-view"></div>
+>1) `<div ng-view></div>`
+>2) `<ng-view></ng-view>`
+>3) `<div class="ng-view"></div>`
+
 
