@@ -170,7 +170,38 @@ If you want to navigate to different pages in your application, but you also wan
 
 The ***ngRoute*** module routes your application to different pages without reloading the entire application.
 
-### What do I Need?
-To make your applications ready for routing, you must include the AngularJS Route module:
+### What do we Need?
+To make our application ready for routing, we must include the AngularJS Route module:
+
 `<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>` 
-**Or download angular.route.js file and save it in your project js folder**
+**Or** download **angular.route.js** file and save it in our project js folder.
+
+Then, we must add the **ngRoute** as a dependency in the application module: `var app = angular.module("myApp", ["ngRoute"]);`.
+Use the **$routeProvider** to configure different routes in our application.
+`
+app.config(function($routeProvider) {
+  $routeProvider
+  .when("/", {
+    templateUrl : "home.html"
+  })
+  .when("/contact", {
+    templateUrl : "contact.html",
+    controller : "contactCtrl"
+  })
+  .when("/about", {
+    templateUrl : "about.html",
+    controller : "aboutCtrl"
+  });
+});
+`
+### Controllers
+With the $routeProvider you can also define a controller for each "view".
+
+`
+app.controller("contactCtrl", function ($scope) {
+  $scope.msg = "Contact us at branch location";
+});
+app.controller("aboutCtrl", function ($scope) {
+  $scope.msg = "It's a CMM5 Level MNC company";
+});
+`
